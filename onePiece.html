@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body {
+            background: burlywood;
+            position: relative;
+        }
+
+        .head {
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            margin-top: 100px;
+            margin-left: 350px;
+            background: white;
+            border-radius: 50%;
+            border-style: solid;
+            /*z-index: ;*/
+        }
+
+        .bones {
+            position: absolute;
+            width: 200px;
+            height: 60px;
+            left: -135px;
+            top: -20px;
+            background: white;
+            transform: rotate(45deg);
+            z-index: -1;
+            border-style: solid;
+
+        }
+
+        .bones2 {
+            position: absolute;
+            width: 200px;
+            height: 60px;
+            left: 420px;
+            top: -20px;
+            background: white;
+            transform: rotate(-45deg);
+            z-index: -1;
+            border-style: solid;
+
+        }
+
+        .bones3 {
+            position: absolute;
+            width: 200px;
+            height: 60px;
+            left: -135px;
+            top: 420px;
+            background: white;
+            transform: rotate(-45deg);
+            z-index: -1;
+            border-style: solid;
+
+        }
+
+        .bones4 {
+            position: absolute;
+            width: 200px;
+            height: 60px;
+            left: 420px;
+            top: 420px;
+            background: white;
+            transform: rotate(45deg);
+            z-index: -1;
+            border-style: solid;
+
+        }
+
+        /*.boneBall1 {*/
+        /*    position: absolute;*/
+        /*    width: 100px;*/
+        /*    height: 100px;*/
+        /*    border-style: solid;*/
+        /*    border-radius: 50%;*/
+        /*    box-shadow: 220px -550px 0 2px white,*/
+        /*    265px -600px 0 2px white,*/
+        /*        !*-------------*! 850px -600px 0 2px white,*/
+        /*    905px -550px 0 2px white,*/
+        /*        !*----------------------*! 905px 0px 0 2px white,*/
+        /*    850px 50px 0 2px white,*/
+        /*        !*--------------------*! 180px 0px 0 2px white,*/
+        /*    230px 50px 0 2px white;*/
+
+        /*}*/
+
+        /*--------*/
+        .boneBall1 {
+            position: absolute;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            left: -200px;
+            top: -100px;
+            display: inline-block;
+            background-color: white;
+            border-top: 3px solid transparent;
+            border-left: 6px solid black;
+            border-right: 6px solid black;
+            border-bottom: 6px solid black;
+            transform: rotate(80deg);
+        }
+
+        .boneBall2 {
+            position: absolute;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            left: -120px;
+            top: -150px;
+            display: inline-block;
+            background-color: white;
+            border-top: 3px solid transparent;
+            border-left: 6px solid black;
+            border-right: 6px solid black;
+            border-bottom: 6px solid black;
+            transform: rotate(-140deg);
+        }
+
+        .boneBall3 {
+            position: absolute;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            left: 520px;
+            top: -160px;
+            display: inline-block;
+            background-color: white;
+            border-top: 3px solid transparent;
+            border-left: 6px solid black;
+            border-right: 6px solid black;
+            border-bottom: 6px solid black;
+            transform: rotate(-200deg);
+        }
+
+        .boneBall4 {
+            position: absolute;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            left: 580px;
+            top: -100px;
+            display: inline-block;
+            background-color: white;
+            border-top: 3px solid transparent;
+            border-left: 6px solid black;
+            border-right: 6px solid black;
+            border-bottom: 6px solid black;
+            transform: rotate(-80deg);
+        }
+
+        .boneBall5 {
+            position: absolute;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            left: -200px;
+            top: 465px;
+            display: inline-block;
+            background-color: white;
+            border-top: 3px solid transparent;
+            border-left: 6px solid black;
+            border-right: 6px solid black;
+            border-bottom: 6px solid black;
+            transform: rotate(106deg);
+        }
+
+        .boneBall6 {
+            position: absolute;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            left: -120px;
+            top: 520px;
+            display: inline-block;
+            background-color: white;
+            border-top: 3px solid transparent;
+            border-left: 6px solid black;
+            border-right: 6px solid black;
+            border-bottom: 6px solid black;
+            transform: rotate(-45deg);
+        }
+
+        .boneBall7 {
+            position: absolute;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            left: 500px;
+            top: 530px;
+            display: inline-block;
+            background-color: white;
+            border-top: 3px solid transparent;
+            border-left: 6px solid black;
+            border-right: 6px solid black;
+            border-bottom: 6px solid black;
+            transform: rotate(35deg);
+        }
+
+        .boneBall8 {
+            position: absolute;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            left: 580px;
+            top: 480px;
+            display: inline-block;
+            background-color: white;
+            border-top: 3px solid transparent;
+            border-left: 6px solid black;
+            border-right: 6px solid black;
+            border-bottom: 6px solid black;
+            transform: rotate(-85deg);
+        }
+
+        /*-----------*/
+        .mouth {
+            position: absolute;
+            width: 300px;
+            height: 350px;
+            top: 340px;
+            left: 90px;
+            background: white;
+            border-radius: 50%;
+            z-index: -1;
+            border-style: solid;
+
+        }
+
+
+        .hat {
+            position: absolute;
+            top: 18%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 200px;
+            width: 500px;
+            border-radius: 450px 450px 0 0;
+            background-color: #fcca27;
+            z-index: 2;
+            border-style: solid;
+        }
+
+        .stripe {
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 30px;
+            width: 500px;
+            border-radius: 5000px 5000px 100px 100px;
+            background-color: #f64a4a;
+            z-index: 1;
+            border-style: solid;
+        }
+
+        .aba {
+            position: relative;
+            width: 800px;
+            height: 100px;
+            margin-top: 10px;
+            margin-left: -150px;
+            background: #fcca27;
+            border-radius: 50%;
+            z-index: 2;
+            border-style: solid;
+
+        }
+
+        .testa {
+            position: absolute;
+            top: 45%;
+            left: 249px;
+            transform: translate(-50%, -50%);
+            height: 98px;
+            width: 495px;
+            border-radius: 5000px 5000px 100px 100px;
+            background-color: white;
+            z-index: 11;
+            border-style: solid;
+            border-bottom: 0;
+        }
+
+        .eye1 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: black;
+            border-radius: 50%;
+            left: 60px;
+            top: 25px;
+        }
+
+        .eye2 {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: black;
+            border-radius: 50%;
+            left: 290px;
+            top: 25px;
+        }
+
+        .noise {
+            position: absolute;
+            width: 70px;
+            height: 70px;
+            background: black;
+            border-radius: 50%;
+            left: 215px;
+            top: 170px;
+        }
+
+        .teeth {
+            position: absolute;
+            z-index: -1;
+            width: 298px;
+            height: 100px;
+            left: -5px;
+            top: 170px;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            border: 6px solid #000;
+            transform: rotate(180deg);
+            border-bottom: 0;
+        }
+
+        .teeth2 {
+            position: absolute;
+            z-index: -1;
+            width: 290px;
+            height: 100px;
+            left: -1px;
+            top: 125px;
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+            border: 6px solid #000;
+            transform: rotate(180deg);
+            border-bottom: 0;
+        }
+        .line1{
+            position: absolute;
+            z-index: -1;
+            width: 5px;
+            height: 110px;
+            top: 160px;
+            left: 150px;
+            background: black;
+        }
+        .line2{
+            position: absolute;
+            z-index: -1;
+            width: 5px;
+            height: 105px;
+            top: 140px;
+            left: 50px;
+            background: black;
+            transform: rotate(15deg);
+        }
+        .line3{
+            position: absolute;
+            z-index: -1;
+            width: 5px;
+            height: 105px;
+            top: 140px;
+            left: 250px;
+            background: black;
+            transform: rotate(-15deg);
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div style="padding-top: 100px">
+    <div class="head">
+
+        <div class="bones">
+        </div>
+        <div class="bones2">
+        </div>
+        <div class="bones3">
+        </div>
+        <div class="bones4">
+        </div>
+        <div class="boneBall1 ">
+        </div>
+        <div class="boneBall2">
+        </div>
+
+        <div class="boneBall3">
+        </div>
+        <div class="boneBall4">
+        </div>
+        <div class="boneBall5">
+        </div>
+        <div class="boneBall6">
+        </div>
+        <div class="boneBall7">
+        </div>
+        <div class="boneBall8">
+        </div>
+        <div class="mouth">
+            <div class="teeth">
+            </div>
+            <div class="teeth2">
+            </div>
+            <div class="line1">
+            </div>
+            <div class="line2">
+            </div>
+            <div class="line3">
+            </div>
+        </div>
+        <div class="blank">
+        </div>
+        <div class=" "></div>
+        <div class="hat">
+            <div class="stripe">
+                <div class="aba">
+                </div>
+            </div>
+        </div>
+        <div class="testa">
+            <div class="eye1"></div>
+            <div class="eye2"></div>
+            <div class="noise"></div>
+
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+</html>
